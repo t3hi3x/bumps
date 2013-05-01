@@ -3,30 +3,31 @@
 //  Bumps
 //
 //  Created by Matt Swanson on 4/1/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Modified by Alex Breshears on 4/30/13
 //
 
 #import "MainViewController.h"
 
 
-@implementation MainViewController
-@synthesize textView, logButton, logIDField, label, car, switch1, switch2;
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
+NSString* const kLogIdKey = @"log_id";
+NSString* const kServerHostKey = @"server_host";
+NSString* const kServerPortKey = @"server_port";
+NSString* const kOBDServerHostKey = @"obdkey_host";
+NSString* const kOBDServerPortKey = @"obdkey_port";
 
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
+@implementation MainViewController
+
+@synthesize textView, logButton, logIDField, label, car, switch1, switch2;
+
+#pragma mark - Preferences Keys
+
+#pragma mark - View Controller Lifecycle
+
 - (void)loadView {
+    [self onDefaultsChanged:nil];
     //fill the background with black
-	UITextView * theview = [[UITextView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+	UIView * theview = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 	theview.backgroundColor = [UIColor blackColor];
-	theview.editable = FALSE;
 	self.view = theview;
 	[theview release];
 	
@@ -39,20 +40,20 @@
 	textView.text = @"Now is the time for all good developers to come to serve their country.\n\nNow is the time for all good developers to come to serve their country.";
 	[self.view addSubview:textView];
 	
-
+    
     //add the user control labels, nothing special
-   label = [[UILabel alloc] initWithFrame:CGRectMake(0,40,150,50)];
+    label = [[UILabel alloc] initWithFrame:CGRectMake(0,40,150,50)];
 	label.text = @"OBD Enabled?";
-	label.textAlignment = UITextAlignmentLeft;
+	//label.textAlignment = UITextAlignmentLeft;
 	label.textColor = [UIColor whiteColor];
 	label.backgroundColor = [UIColor clearColor];
 	label.font = [UIFont fontWithName:@"Courier" size:16];
 	[self.view addSubview:label];
 	[label release];
-   
-   label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,70,50)];
+    
+    label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,70,50)];
 	label.text = @"Log ID";
-	label.textAlignment = UITextAlignmentLeft;
+	//label.textAlignment = UITextAlignmentLeft;
 	label.textColor = [UIColor whiteColor];
 	label.backgroundColor = [UIColor clearColor];
 	label.font = [UIFont fontWithName:@"Courier" size:16];
@@ -61,7 +62,7 @@
 	
 	label = [[UILabel alloc] initWithFrame:CGRectMake(0,80,150,50)];
 	label.text = @"Logging Status";
-	label.textAlignment = UITextAlignmentLeft;
+	//label.textAlignment = UITextAlignmentLeft;
 	label.textColor = [UIColor whiteColor];
 	label.backgroundColor = [UIColor clearColor];
 	label.font = [UIFont fontWithName:@"Courier" size:16];
@@ -69,18 +70,22 @@
 	[label release];
 	
     //create the CarDataProvider object so we can get data
-   car = [CarDataProvider alloc];
-   car.shouldLogOBD = FALSE;
-   
-   //create toggle switches, use alternateColor because we are badass like that
+    car = [CarDataProvider alloc];
+    car.server_host = self.server_host;
+    car.server_port = self.server_port;
+    car.obdkey_host = self.obdkey_host;
+    car.obdkey_port = self.obdkey_port;
+    car.shouldLogOBD = FALSE;
+    
+    //create toggle switches, use alternateColor because we are badass like that
 	switch1 = [[UISwitch alloc] initWithFrame:CGRectMake(185, 50, 500, 100)];
-	[switch1 setAlternateColors:YES];   //undocumented, may cause app store rejection
+	//[switch1 setAlternateColors:YES];   //undocumented, may cause app store rejection
 	[switch1 addTarget:self action:@selector(shouldLogOBDToggled:) forControlEvents:UIControlEventValueChanged];
 	[self.view addSubview:switch1];
 	[switch1 release];
 	
-   switch2 = [[UISwitch alloc] initWithFrame:CGRectMake(185, 90, 500, 100)];
-	[switch2 setAlternateColors:YES]; //undocumented, may cause app store rejection
+    switch2 = [[UISwitch alloc] initWithFrame:CGRectMake(185, 90, 500, 100)];
+	//[switch2 setAlternateColors:YES]; //undocumented, may cause app store rejection
 	[switch2 addTarget:self action:@selector(startLogToggled:) forControlEvents:UIControlEventValueChanged];
 	[self.view addSubview:switch2];
 	[switch2 release];
@@ -90,10 +95,34 @@
 	logIDField.backgroundColor = [UIColor blackColor];
 	logIDField.borderStyle = UITextBorderStyleRoundedRect;
 	logIDField.delegate = self;
-   logIDField.text = @"ChangeMe!";
+    //logIDField.editable = FALSE;
+    logIDField.text = self.log_id;
 	[self.view addSubview:logIDField];
 	[logIDField release];
 }
+
+
+#pragma mark - Preferences
+
+// -------------------------------------------------------------------------------
+//	onDefaultsChanged:
+//  Handler for the NSUserDefaultsDidChangeNotification.
+// -------------------------------------------------------------------------------
+- (void)onDefaultsChanged:(NSNotification*)aNotification
+{
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    
+    self.log_id = [standardDefaults objectForKey:kLogIdKey];
+    self.server_host = [standardDefaults objectForKey:kServerHostKey];
+    self.server_port = [standardDefaults objectForKey:kServerPortKey];
+    self.obdkey_host = [standardDefaults objectForKey:kOBDServerHostKey];
+    self.obdkey_port = [standardDefaults objectForKey:kOBDServerPortKey];
+
+}
+
+    
+
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
 
 - (IBAction) shouldLogOBDToggled: (id) sender {
     //event handler for the "Do you want to log OBD data" toggle switch

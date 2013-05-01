@@ -3,11 +3,11 @@
 //  Bumps
 //
 //  Created by Jevin Sweval on 4/1/10.
-//  Copyright 2010 Apple Inc. All rights reserved.
+//  Modified by Alex Breshears on 4/30/13
 //
 
 #import "CarDataProvider.h"
-
+#include <signal.h>
 
 @implementation CarDataProvider
 
@@ -18,6 +18,7 @@
 @synthesize lm;
 @synthesize obdDisplayStr, gpsDisplayStr, accelDisplayStr;
 @synthesize timer, shouldLogOBD;
+@synthesize log_id, server_host, server_port, obdkey_host, obdkey_port;
 
 - (NSString *)readPid:(int)pid len:(int)len
 {
@@ -89,7 +90,7 @@
    int ret;
    
    // try to connect to the key, return False on failure
-   if (![self connectSocket:&keySock host:OBDKEY_HOST port:OBDKEY_PORT]) {
+   if (![self connectSocket:&keySock host:self.obdkey_host port:self.obdkey_port]) {
       return FALSE;
    }
    
@@ -138,7 +139,7 @@
 - (BOOL)connectServer
 {
    // try to connect to the server
-   if (![self connectSocket:&serverSock host:SERVER_HOST port:SERVER_PORT]) {
+   if (![self connectSocket:&serverSock host:self.server_host port:self.server_port]) {
       return FALSE;
    }
    
@@ -506,27 +507,56 @@
 	gpsDisplayStr = [[NSString alloc] initWithFormat:@"Location: %@", [newLocation description]];
    
    [self updateDisplay];
-	
+	signal(SIGPIPE, SIG_IGN);
 	const char *p;
-	p = [[NSString stringWithFormat:@"%@:LA:%.10f\r\n", logId, [newLocation coordinate].latitude]
-        cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
-	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:LO:%0.10f\r\n", logId, [newLocation coordinate].longitude]
-        cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
-	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:CO:%.2f\r\n", logId, [newLocation course]]
-        cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
-	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:HA:%.2f\r\n", logId, [newLocation horizontalAccuracy]]
-        cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
-	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:VA:%.2f\r\n", logId, [newLocation verticalAccuracy]]
-        cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
-	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:SP:%.2f\r\n", logId, [newLocation speed]]
-        cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
-	send(serverSock, p, strlen(p), 0);
-	
+    @try {
+        p = [[NSString stringWithFormat:@"%@:LA:%.10f\r\n", logId, [newLocation coordinate].latitude]
+             cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
+        send(serverSock, p, strlen(p), 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception caught: %@", exception);
+    }
+    @try {
+        p = [[NSString stringWithFormat:@"%@:LO:%0.10f\r\n", logId, [newLocation coordinate].longitude]
+             cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
+        send(serverSock, p, strlen(p), 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception caught: %@", exception);
+    }
+    @try {
+        p = [[NSString stringWithFormat:@"%@:CO:%.2f\r\n", logId, [newLocation course]]
+             cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
+        send(serverSock, p, strlen(p), 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception caught: %@", exception);
+    }
+    @try {
+        p = [[NSString stringWithFormat:@"%@:HA:%.2f\r\n", logId, [newLocation horizontalAccuracy]]
+             cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
+        send(serverSock, p, strlen(p), 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception caught: %@", exception);
+    }
+    @try {
+        p = [[NSString stringWithFormat:@"%@:VA:%.2f\r\n", logId, [newLocation verticalAccuracy]]
+             cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
+        send(serverSock, p, strlen(p), 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception caught: %@", exception);
+    }
+    @try {
+        p = [[NSString stringWithFormat:@"%@:SP:%.2f\r\n", logId, [newLocation speed]]
+             cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
+        send(serverSock, p, strlen(p), 0);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception caught: %@", exception);
+    }	
 }
 
 - (void)locationManager:(CLLocationManager *)manager

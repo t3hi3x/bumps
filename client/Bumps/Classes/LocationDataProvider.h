@@ -3,7 +3,7 @@
 //  Bumps
 //
 //  Created by Matt Swanson on 4/1/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Modified by Alex Breshears on 4/30/13
 //
 
 #import <Foundation/Foundation.h>

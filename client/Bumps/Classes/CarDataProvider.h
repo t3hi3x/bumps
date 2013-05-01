@@ -3,7 +3,7 @@
 //  Bumps
 //
 //  Created by Jevin Sweval on 4/1/10.
-//  Copyright 2010 Apple Inc. All rights reserved.
+//  Modified by Alex Breshears on 4/30/13
 //
 
 #import <Foundation/Foundation.h>
@@ -48,6 +48,11 @@
 @property (nonatomic, retain) NSString *gpsDisplayStr;
 @property (nonatomic, retain) NSString *accelDisplayStr;
 @property (nonatomic) BOOL *shouldLogOBD;
+@property (nonatomic, retain) NSString *log_id;
+@property (nonatomic, retain) NSString *server_host;
+@property (nonatomic, retain) NSString *server_port;
+@property (nonatomic, retain) NSString *obdkey_host;
+@property (nonatomic, retain) NSString *obdkey_port;
 
 - (NSString *)readPid:(int) pid len:(int)len;
 

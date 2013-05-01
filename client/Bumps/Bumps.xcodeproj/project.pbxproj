@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,12 @@
 		C1CD559C116568970046C71D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CD559B116568970046C71D /* MainViewController.m */; };
 		C1CD56CE11657D4F0046C71D /* LocationDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CD56CD11657D4F0046C71D /* LocationDataProvider.m */; };
 		C1CD5727116581180046C71D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CD5726116581180046C71D /* CoreLocation.framework */; };
+		C8BC166E172CBE81001F3938 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8BC166D172CBE81001F3938 /* Settings.bundle */; };
+		C8BC1670172DD093001F3938 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8BC166F172DD093001F3938 /* MainView.xib */; };
+		C8E16A73172EFF360082A934 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C8E16A72172EFF360082A934 /* data.sqlite */; };
+		C8E16A76172F02120082A934 /* SQLiteDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E16A75172F02120082A934 /* SQLiteDataProvider.m */; };
+		C8E16A78172F03730082A934 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E16A77172F03730082A934 /* libsqlite3.0.dylib */; };
+		C8E16A7A172F10570082A934 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8E16A79172F10570082A934 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,13 @@
 		C1CD56CC11657D4F0046C71D /* LocationDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataProvider.h; sourceTree = "<group>"; };
 		C1CD56CD11657D4F0046C71D /* LocationDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataProvider.m; sourceTree = "<group>"; };
 		C1CD5726116581180046C71D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C8BC166D172CBE81001F3938 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		C8BC166F172DD093001F3938 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		C8E16A72172EFF360082A934 /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
+		C8E16A74172F02120082A934 /* SQLiteDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteDataProvider.h; sourceTree = "<group>"; };
+		C8E16A75172F02120082A934 /* SQLiteDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteDataProvider.m; sourceTree = "<group>"; };
+		C8E16A77172F03730082A934 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		C8E16A79172F10570082A934 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E16A78172F03730082A934 /* libsqlite3.0.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -66,6 +80,8 @@
 				C1CD559B116568970046C71D /* MainViewController.m */,
 				C1CD56CC11657D4F0046C71D /* LocationDataProvider.h */,
 				C1CD56CD11657D4F0046C71D /* LocationDataProvider.m */,
+				C8E16A74172F02120082A934 /* SQLiteDataProvider.h */,
+				C8E16A75172F02120082A934 /* SQLiteDataProvider.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -86,7 +102,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				C1CD5726116581180046C71D /* CoreLocation.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -94,9 +109,12 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C8E16A72172EFF360082A934 /* data.sqlite */,
 				09A3C02E11658A0F0002857D /* config.h */,
 				32CA4F630368D1EE00C91783 /* Bumps_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				C8BC166D172CBE81001F3938 /* Settings.bundle */,
+				C8BC166F172DD093001F3938 /* MainView.xib */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -104,6 +122,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C8E16A79172F10570082A934 /* Default-568h@2x.png */,
 				C14EDF5F1178D62000261329 /* Icon.png */,
 				8D1107310486CEB800E47090 /* Bumps-Info.plist */,
 			);
@@ -113,6 +132,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8E16A77172F03730082A934 /* libsqlite3.0.dylib */,
+				C1CD5726116581180046C71D /* CoreLocation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -145,9 +166,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Bumps" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C14EDF601178D62000261329 /* Icon.png in Resources */,
+				C8BC166E172CBE81001F3938 /* Settings.bundle in Resources */,
+				C8BC1670172DD093001F3938 /* MainView.xib in Resources */,
+				C8E16A73172EFF360082A934 /* data.sqlite in Resources */,
+				C8E16A7A172F10570082A934 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +210,7 @@
 				C1CD559C116568970046C71D /* MainViewController.m in Sources */,
 				C1CD56CE11657D4F0046C71D /* LocationDataProvider.m in Sources */,
 				09A3C027116589F70002857D /* CarDataProvider.m in Sources */,
+				C8E16A76172F02120082A934 /* SQLiteDataProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +227,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Bumps_Prefix.pch;
 				INFOPLIST_FILE = "Bumps-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = Bumps;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -206,7 +241,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Bumps_Prefix.pch;
 				INFOPLIST_FILE = "Bumps-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = Bumps;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -218,9 +255,9 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				"PROVISIONING_PROFILE[sdk=iphoneos3.1.2]" = "792438DE-05D9-4B5F-B3DB-1E4C6BE54A19";
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -232,8 +269,8 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = iphoneos3.1.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

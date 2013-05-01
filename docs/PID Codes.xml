@@ -1,0 +1,1716 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Alex Breshears</Author>
+  <LastAuthor>Alex Breshears</LastAuthor>
+  <Created>2013-04-28T20:18:38Z</Created>
+  <LastSaved>2013-04-28T21:09:11Z</LastSaved>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10860</WindowHeight>
+  <WindowWidth>25600</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16" ss:Name="Hyperlink">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#0000D4"
+    ss:Underline="Single"/>
+  </Style>
+  <Style ss:ID="s17">
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s19">
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s20">
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+   <NumberFormat ss:Format="#,##0"/>
+  </Style>
+  <Style ss:ID="s22">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s23">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s29">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s30">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Times" ss:Size="14" ss:Color="#000000"/>
+   <NumberFormat ss:Format="Standard"/>
+  </Style>
+  <Style ss:ID="s31" ss:Parent="s16">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s32" ss:Parent="s16">
+   <Font ss:FontName="Calibri" ss:Size="12" ss:Underline="Single"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="PID Codes.csv">
+  <Names>
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="='PID Codes.csv'!R1C1:R1C10"
+    ss:Hidden="1"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="11" ss:ExpandedRowCount="122" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s26" ss:Width="38"/>
+   <Column ss:Width="617"/>
+   <Column ss:Width="139" ss:Span="2"/>
+   <Column ss:Index="8" ss:Width="72"/>
+   <Column ss:Width="79"/>
+   <Column ss:Width="513"/>
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">PID</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Description</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Units</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Created</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Updated</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Return Bytes</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Description</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Min value</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Max value</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Formula</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">CleanFormula</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PIDs supported [01 - 20]</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Bit encoded [A7..D0] == [PID 0x01..PID 0x20]</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">Bit encoded [A7..D0] == [PID 0x01..PID 0x20]</Data></Cell>
+   </Row>
+   <Row ss:Height="195">
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">Test available      Test incomplete&#13;Misfire                B0                   B4           &#13;Fuel System            B1                   B5&#13;Components             B2                   B6&#13;Reserved               B3                   B7&#13;Catalyst               C0                   D0&#13;Heated Catalyst        C1                   D1&#13;Evaporative System     C2                   D2&#13;Secondary Air System   C3                   D3&#13;A/C Refrigerant        C4                   D4&#13;Oxygen Sensor          C5                   D5&#13;Oxygen Sensor Heater   C6                   D6&#13;EGR System             C7                   D7</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">Test available      Test incompleteMisfire                B0                   B4           Fuel System            B1                   B5Components             B2                   B6Reserved               B3                   B7Catalyst               C0                   D0Heated Catalyst        C1                   D1Evaporative System     C2                   D2Secondary Air System   C3                   D3A/C Refrigerant        C4                   D4Oxygen Sensor          C5                   D5Oxygen Sensor Heater   C6                   D6EGR System             C7                   D7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s32" ss:HRef="http://en.wikipedia.org/wiki/Diagnostic_Trouble_Code"
+     x:HRefScreenTip="Diagnostic Trouble Code"><Data ss:Type="String">Freeze&#160;DTC</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Freeze frame trouble code</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s16"/>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Fuel system status</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">A0     Open loop due to insufficient engine temperature&#13;A1     Closed loop, using oxygen sensor feedback to determine fuel mix&#13;A2     Open loop due to engine load OR fuel cut due to desacceleration &#13;A3     Open loop due to system failure&#13;A4     Closed loop, using at least one oxygen sensor but there is a fault in the feedback system&#13;A5-A7  Always zero</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A0     Open loop due to insufficient engine temperatureA1     Closed loop, using oxygen sensor feedback to determine fuel mixA2     Open loop due to engine load OR fuel cut due to desacceleration A3     Open loop due to system failureA4     Closed loop, using at least one oxygen sensor but there is a fault in the feedback systemA5-A7  Always zero</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Calculated engine load value</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Engine coolant temperature</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">215</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A-40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A-40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Short term fuel&#160;% trim—Bank 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">-100 (Rich)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">99.22 (Lean)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Long term fuel&#160;% trim—Bank 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">-100 (Rich)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">99.22 (Lean)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Short term fuel&#160;% trim—Bank 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">-100 (Rich)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">99.22 (Lean)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Long term fuel&#160;% trim—Bank 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">-100 (Rich)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">99.22 (Lean)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A-128) * 100/128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">MAF air flow rate</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">g/s</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">655.35</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((256*A)+B) / 100</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((256*A)+B) / 100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Throttle position</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Commanded secondary air status</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">A0     Upstream of catalytic converter&#13;A1     Downstream of catalytic converter&#13;A2     From the outside atmosphere or off&#13;A3-A7  Always zero</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A0     Upstream of catalytic converterA1     Downstream of catalytic converterA2     From the outside atmosphere or offA3-A7  Always zero</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Oxygen sensors present</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">[A0..A3] == Bank 1, Sensors 1-4. [A4..A7] == Bank 2...</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">[A0..A3] == Bank 1, Sensors 1-4. [A4..A7] == Bank 2...</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 1, Sensor 1:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 1, Sensor 2:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 1, Sensor 3:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 1, Sensor 4:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 2, Sensor 1:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 2, Sensor 2:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PIDs supported 21-40</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Bit encoded [A7..D0] == [PID 0x21..PID 0x40]</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">Bit encoded [A7..D0] == [PID 0x21..PID 0x40]</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Distance traveled with malfunction indicator lamp (MIL) on</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">km</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">65535</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A*256)+B</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A*256)+B</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Fuel Rail Pressure (relative to manifold vacuum)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">kPa</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">5177.2650000000003</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B) * 0.079</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B) * 0.079</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Fuel Rail Pressure (diesel)</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">kPa (gauge)</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">655350</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B) * 10</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B) * 10</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S1_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S2_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S3_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">27</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S4_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S5_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">29</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S6_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String"># of warm-ups since codes cleared</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">N/A</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Distance traveled since codes cleared</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">km</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">65535</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A*256)+B</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A*256)+B</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Evap. System Vapor Pressure</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Pa</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">-8192</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">8192</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B)/4 - 8,192</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/4 - 8,192</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Barometric pressure</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">kPa (Absolute)</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S1_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S2_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S3_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S4_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">38</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S5_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">39</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S6_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">PIDs supported 41-60</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Bit encoded [A7..D0] == [PID 0x41..PID 0x60]</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">Bit encoded [A7..D0] == [PID 0x41..PID 0x60]</Data></Cell>
+   </Row>
+   <Row ss:Height="195">
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">41</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Monitor status this drive cycle</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">                  Test enabled       Test incomplete&#13;Misfire                B0                   B4           &#13;Fuel System            B1                   B5&#13;Components             B2                   B6&#13;Reserved               B3                   B7&#13;Catalyst               C0                   D0&#13;Heated Catalyst        C1                   D1&#13;Evaporative System     C2                   D2&#13;Secondary Air System   C3                   D3&#13;A/C Refrigerant        C4                   D4&#13;Oxygen Sensor          C5                   D5&#13;Oxygen Sensor Heater   C6                   D6&#13;EGR System             C7                   D7</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">                  Test enabled       Test incompleteMisfire                B0                   B4           Fuel System            B1                   B5Components             B2                   B6Reserved               B3                   B7Catalyst               C0                   D0Heated Catalyst        C1                   D1Evaporative System     C2                   D2Secondary Air System   C3                   D3A/C Refrigerant        C4                   D4Oxygen Sensor          C5                   D5Oxygen Sensor Heater   C6                   D6EGR System             C7                   D7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">42</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Control module voltage</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">V</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">65.534999999999997</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B)/1000</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/1000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">43</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Absolute load value</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">25700</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B)*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">44</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Command equivalence ratio</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">N/A</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B)*0.0000305</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">45</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Relative throttle position</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">46</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Ambient air temperature</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">215</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A-40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A-40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">47</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Absolute throttle position B</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">48</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Absolute throttle position C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">49</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Accelerator pedal position D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row ss:Height="330">
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">51</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Fuel Type</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">01    Gasoline&#13;02    Methanol&#13;03    Ethanol&#13;04    Diesel&#13;05    LPG&#13;06    CNG&#13;07    Propane&#13;08    Electric&#13;09    Bifuel running Gasoline&#13;0A    Bifuel running Methanol&#13;0B    Bifuel running Ethanol&#13;0C    Bifuel running LPG&#13;0D    Bifuel running CNG&#13;0E    Bifuel running Prop&#13;0F    Bifuel running Electricity&#13;10    Bifuel mixed gas/electric&#13;11    Hybrid gasoline&#13;12    Hybrid Ethanol&#13;13    Hybrid Diesel&#13;14    Hybrid Electric&#13;15    Hybrid Mixed fuel&#13;16    Hybrid Regenerative</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">01    Gasoline02    Methanol03    Ethanol04    Diesel05    LPG06    CNG07    Propane08    Electric09    Bifuel running Gasoline0A    Bifuel running Methanol0B    Bifuel running Ethanol0C    Bifuel running LPG0D    Bifuel running CNG0E    Bifuel running Prop0F    Bifuel running Electricity10    Bifuel mixed gas/electric11    Hybrid gasoline12    Hybrid Ethanol13    Hybrid Diesel14    Hybrid Electric15    Hybrid Mixed fuel16    Hybrid Regenerative</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">52</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Ethanol fuel&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">OBD Monitor IDs supported ($01 - $20)</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">101</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">102</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">103</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">104</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">105</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">106</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">107</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">108</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">109</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">110</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">201</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">202</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">203</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">204</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 1 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">205</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">206</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">207</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">208</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 2 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">209</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="Number">210</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">010A</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">010B</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">010C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">010D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">010E</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">010F</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Rich to lean sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">020A</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">020B</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">020C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 3 Sensor 4</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">020D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">020E</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">020F</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">O2 Sensor Monitor Bank 4 Sensor 3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Volts</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1.2749999999999999</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0.005 Lean to Rich sensor threshold voltage</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">0A</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Fuel pressure</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">kPa (gauge)</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">765</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*3</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">0B</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Intake manifold absolute pressure</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">kPa (absolute)</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">0C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Engine RPM</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">rpm</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s19"><Data ss:Type="Number">16383.75</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">((A*256)+B)/4</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">0D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Vehicle speed</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">km/h</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">0E</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Timing advance</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">° relative to #1 cylinder</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">-64</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">63.5</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A/2 - 64</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A/2 - 64</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">0F</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Intake air temperature</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">215</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A-40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A-40</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">1A</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 2, Sensor 3:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">1B</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Bank 2, Sensor 4:&#13;Oxygen sensor voltage,&#13;Short term fuel trim</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Volts&#13;%</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">0&#13;-100(lean)</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1.275&#13;99.2(rich)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A * 0.005&#13;(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A * 0.005(B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Data></Cell>
+   </Row>
+   <Row ss:Height="195">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">1C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">OBD standards this vehicle conforms to</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s31"><Data ss:Type="String">0x01  00000001b    OBD-II as defined by the CARB&#13;0x02  00000010b    OBD as defined by the EPA&#13;0x03  00000011b    OBD and OBD-II&#13;0x04  00000100b    OBD-I&#13;0x05  00000101b    Not meant to comply with any OBD standard&#13;0x06  00000110b    EOBD (Europe)&#13;0x07  00000111b    EOBD and OBD-II&#13;0x08  00001000b    EOBD and OBD&#13;0x09  00001001b    EOBD, OBD and OBD II&#13;0x0A  00001010b    JOBD (Japan)&#13;0x0B  00001011b    JOBD and OBD II&#13;0x0C  00001100b    JOBD and EOBD&#13;0x0D  00001101b    JOBD, EOBD, and OBD II</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">0x01  00000001b    OBD-II as defined by the CARB0x02  00000010b    OBD as defined by the EPA0x03  00000011b    OBD and OBD-II0x04  00000100b    OBD-I0x05  00000101b    Not meant to comply with any OBD standard0x06  00000110b    EOBD (Europe)0x07  00000111b    EOBD and OBD-II0x08  00001000b    EOBD and OBD0x09  00001001b    EOBD, OBD and OBD II0x0A  00001010b    JOBD (Japan)0x0B  00001011b    JOBD and OBD II0x0C  00001100b    JOBD and EOBD0x0D  00001101b    JOBD, EOBD, and OBD II</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">1D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Oxygen sensors present</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Similar to PID 13, but [A0..A7] == [B1S1, B1S2, B2S1, B2S2, B3S1, B3S2, B4S1, B4S2]</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">Similar to PID 13, but [A0..A7] == [B1S1, B1S2, B2S1, B2S2, B3S1, B3S2, B4S1, B4S2]</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">1E</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Auxiliary input status</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">A0 == Power Take Off (PTO) status (1 == active)&#13;[A1..A7] not used</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A0 == Power Take Off (PTO) status (1 == active)[A1..A7] not used</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">1F</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Run time since engine start</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">seconds</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">65535</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A*256)+B</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A*256)+B</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">2A</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S7_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">2B</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S8_WR_lambda(1):&#13;Equivalence Ratio&#13;Voltage</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;V</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;0</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;8</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.000122</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.000122</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">2C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Commanded EGR</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">100*A/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">100*A/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">2D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">EGR Error</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">-100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">99.22</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*0.78125 - 100</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*0.78125 - 100</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">2E</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Commanded evaporative purge</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">100*A/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">100*A/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">2F</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Fuel Level Input</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">100*A/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">100*A/255</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">3A</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S7_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">3B</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">O2S8_WR_lambda(1):&#13;Equivalence Ratio&#13;Current</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">N/A&#13;mA</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">0&#13;-128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">2&#13;128</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">((A*256)+B)*0.0000305&#13;((C*256)+D)*0.00390625 - 128</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)*0.0000305((C*256)+D)*0.00390625 - 128</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">3C</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Catalyst Temperature&#13;Bank 1, Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="Number">6513.5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">3D</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Catalyst Temperature&#13;Bank 2, Sensor 1</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="Number">6513.5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">3E</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Catalyst Temperature&#13;Bank 1, Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="Number">6513.5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">3F</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Catalyst Temperature&#13;Bank 2, Sensor 2</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">°C</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">-40</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="Number">6513.5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">((A*256)+B)/10 - 40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">4A</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Accelerator pedal position E</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">4B</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Accelerator pedal position F</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">4C</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Commanded throttle actuator</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;%</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">A*100/255</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">A*100/255</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">4D</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Time run with MIL on</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">minutes</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">65535</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A*256)+B</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A*256)+B</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">4E</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Time since trouble codes cleared</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">minutes</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s20"><Data ss:Type="Number">65535</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">(A*256)+B</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">(A*256)+B</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">C3</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">Returns numerous data, including Drive Condition ID and Engine Speed*</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">Returns numerous data, including Drive Condition ID and Engine Speed*</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s27"><Data ss:Type="String">C4</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s27"/>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">&#160;?</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">B5 is Engine Idle Request&#13;B6 is Engine Stop Request*</Data></Cell>
+    <Cell ss:Formula="=CLEAN(RC[-1])"><Data ss:Type="String">B5 is Engine Idle RequestB6 is Engine Stop Request*</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s23"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+    <Cell ss:StyleID="s17"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveCol>2</ActiveCol>
+     <RangeSelection>C3</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <AutoFilter x:Range="R1C1:R1C10"
+   xmlns="urn:schemas-microsoft-com:office:excel">
+  </AutoFilter>
+ </Worksheet>
+</Workbook>

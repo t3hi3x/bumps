@@ -3,7 +3,7 @@
 //  stalker
 //
 //  Created by Jevin Sweval on 2/4/10.
-//  Copyright 2010 Purdue University. All rights reserved.
+//  Modified by Alex Breshears on 4/30/13
 //
 
 #import <UIKit/UIKit.h>
@@ -29,6 +29,12 @@
    UISwitch *switch1, *switch2;
 	
 }
+
+@property (strong) NSString *log_id;
+@property (strong) NSString *server_host;
+@property (strong) NSString *server_port;
+@property (strong) NSString *obdkey_host;
+@property (strong) NSString *obdkey_port;
 
 @property (nonatomic, retain) UITextView *textView;
 @property (nonatomic, retain) UIButton *logButton;

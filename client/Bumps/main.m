@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sys/signal.h>
+
+void SigPipeHandler(int s);
+
+void SigPipeHandler(int s)
+{
+    NSLog(@"We Got a Pipe Single :%d____________",s);
+}
 
 int main(int argc, char *argv[]) {
-    
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    signal(SIGPIPE, SigPipeHandler);
     int retVal = UIApplicationMain(argc, argv, nil, @"BumpsAppDelegate");
     [pool release];
     return retVal;
