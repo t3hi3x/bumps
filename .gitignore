@@ -19,4 +19,6 @@ profile
 Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
+.idea/*
+.idea
 
