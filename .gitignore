@@ -1,9 +1,12 @@
 *.sw*
 *.pyc
+*$py.class
+
 # xcode noise
 build/
 *.pbxuser
 *.mode1v3
+
 
 # old skool
 .svn
