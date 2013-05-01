@@ -13,22 +13,12 @@ You should be in the iphone-logger directory.
 >> pwd
 /home/$NAME/iphone-logger
 
->> nohup python server/tcp_server.py &
+>> nohup jython server/tcp_server.py &
 
 
 #####################################
 SERVER SETUP AND CONFIGURATION
 #####################################
-Ensure that the `db.conf` settings file is located in the 
-iphone-logger directory.  This file contains the password 
-and requisite information to use the database.  This file
-is not in the git repository and is stored locally on the
-server (msee140lnx10.ecn.purdue.edu).
-
-The TCP Server runs on port 8005, so make sure that port
-is not being blocked by the firewall or else you will
-not be able to log data.  For assistance with this, contact
-Aaron Ault.
 
 You may verify the servers operation by connecting via
 Telnet.  The server expects data in the following, colon-
