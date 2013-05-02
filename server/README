@@ -5,16 +5,6 @@ ECE495TUV - Spring 2010 VIP
 Make sure that the server is running before you attempt
 to log any data with the iPhone app or it will not work.
 
-#####################################
-LAUNCHING THE SERVER
-#####################################
-You should be in the iphone-logger directory.
-
->> pwd
-/home/$NAME/iphone-logger
-
->> nohup jython server/tcp_server.py &
-
 
 #####################################
 SERVER SETUP AND CONFIGURATION
@@ -29,7 +19,14 @@ delimited format on a single line:
 If the data is valid, it will be decoded and logged to the
 database.  If not, you should receive an error message.
 
-On a fresh install, use the `mysql-setup` file to rebuild
-the database structure.  The server will require Python,
-twisted, and the MySQLdb module to run the code.  These
-packages can be installed using apt-get.
+Requirements:
+
+* Java
+* Jython
+* JDBC Driver appropriate to your database server
+	* Put these in the ./jar folder
+
+NOTE: Due to licensing, no JDBC drivers are included in the source.
+
+On a fresh install, use the scripts/*.sql file to rebuild
+the database structure for your appropriate server.

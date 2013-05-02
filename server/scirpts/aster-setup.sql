@@ -1,25 +1,6 @@
-BEGIN;
-USE iphone_obd2;
-CREATE TABLE IF NOT EXISTS `parameters` (
-  `id` varchar(2) NOT NULL,
-  `name` varchar(200) NOT NULL,
-  `units` varchar(200) default NULL,
-  `created` timestamp NOT NULL default '0000-00-00 00:00:00',
-  `updated` timestamp NOT NULL default '0000-00-00 00:00:00' on update CURRENT_TIMESTAMP,
-  PRIMARY KEY  (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE FACT TABLE data (id serial local, vin varchar(20) NOT NULL, param_id varchar(4) NOT NULL, value double NOT NULL, created timestamp) DISTRIBUTE BY HASH(param_id);
 
-CREATE TABLE IF NOT EXISTS `data` (
-  `id` int(11) NOT NULL auto_increment,
-  `vin` varchar(20) NOT NULL,
-  `param_id` varchar(2) NOT NULL,
-  `value` double NOT NULL,
-  `created` timestamp NOT NULL default '0000-00-00 00:00:00',
-  `updated` timestamp NOT NULL default '0000-00-00 00:00:00' on update CURRENT_TIMESTAMP,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2416 ;
-;
+CREATE DIMENSION TABLE parameters (id varchar(4) NOT NULL, name varchar(200) NOT NULL, units varchar(200), return_bytes varchar(4), description text, min_value varchar(255), max_value varchar(255), formula text, type varchar(255) DEFAULT 'OBD-II' NOT NULL, PRIMARY KEY (id)) DISTRIBUTE BY REPLICATION
 
 INSERT INTO parameters VALUES ('010A', 'O2 Sensor Monitor Bank 3 Sensor 2', 'Volts', '', '', '0', '1.275', '0.005 Rich to lean sensor threshold voltage', 'OBD-II');
 INSERT INTO parameters VALUES ('010B', 'O2 Sensor Monitor Bank 3 Sensor 3', 'Volts', '', '', '0', '1.275', '0.005 Rich to lean sensor threshold voltage', 'OBD-II');
@@ -145,4 +126,3 @@ INSERT INTO parameters VALUES ('LA', 'GPS Latitude', null, null, null, null, nul
 INSERT INTO parameters VALUES ('LO', 'GPS Longitude', null, null, null, null, null, null, 'Sensor');
 INSERT INTO parameters VALUES ('SP', 'GPS Speed', null, null, null, null, null, null, 'Sensor');
 INSERT INTO parameters VALUES ('VA', 'GPS Vertical Accuracy', null, null, null, null, null, null, 'Sensor');
-

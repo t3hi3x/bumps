@@ -25,3 +25,15 @@ Backup[ ]of[ ]*.numbers/
 .idea/*
 .idea
 
+
+server/jar/terajdbc4.jar
+
+server/jar/tdgssconfig.jar
+
+server/jar/hive-jdbc-0.10.0-cdh4.2.0.jar
+
+server/jar/noarch-ncluster-jdbc-driver.jar
+
+server/jar/postgresql-9.2-1002.jdbc4.jar
+
+server/jar/sqljdbc4.jar

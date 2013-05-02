@@ -3,21 +3,26 @@ import threading
 import DatabaseServiceProvider
 import ConfigParser
 
+import datetime
+import time
+
 class ThreadedTCPRequestHandler(SocketServer.StreamRequestHandler):
 	def handle(self):
 		resp = True
 		driver = config.get("database", "jdbc_driver")
 		connection_string = config.get("database", "connection_string")
-		db_handler = DatabaseServiceProvider.DatabaseServiceProvider(connection_string, driver)
+		db_handler = DatabaseServiceProvider.DatabaseServiceProvider(connection_string, driver, DEBUG)
 		while resp:
 			resp = self.rfile.readline().strip()
 			self.data = resp
 			data = resp
 			cur_thread = threading.currentThread()
-			response = "%s: %s" % (cur_thread.getName(), data)
-			print response
+			if DEBUG:
+				response = "%s: %s" % (cur_thread.getName(), data)
+				print response
 			if data:
-				db_handler.logToDatabase(data)
+				date = datetime.datetime.now()
+				db_handler.logToDatabase(data, date)
 			self.request.send("OK")
 
 class ThreadedTCPServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
@@ -31,6 +36,9 @@ if __name__== "__main__":
 	if not BIND_ADDRESS:
 		BIND_ADDRESS = ""
 	PORT = int(config.get("bumps", "port"))
+
+	DEBUG = config.get("bumps", "debug") == "True"
+	
 	server = ThreadedTCPServer((BIND_ADDRESS, PORT), ThreadedTCPRequestHandler)
 	server_thread = threading.Thread(target=server.serve_forever)
 	server_thread.setDaemon(True)
@@ -38,4 +46,4 @@ if __name__== "__main__":
 	server_thread.getName()
 	print "Server started..."
 	while True:
-		pass
+		time.sleep(86400)

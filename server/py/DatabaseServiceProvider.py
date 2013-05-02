@@ -3,16 +3,14 @@ from java.lang import *
 from java.sql import *
 
 class DatabaseServiceProvider():
-	def __init__(self, connection_string, driver, user=None, password=None):
+	def __init__(self, connection_string, driver, debug):
 		self.connection_string = connection_string
 		self.driver = driver
+		self.debug = debug
 		
 		Class.forName(self.driver)
 		self.conn = DriverManager.getConnection(self.connection_string)
-		if user and not password:
-			pass
-		if user and password:
-			pass
+
 		self.decode = {"00": self.supported,
 					   "04": self.engineLoad,
 					   "05": self.coolantTemp,
@@ -102,7 +100,7 @@ class DatabaseServiceProvider():
 			return None
 		return value
 
-	def logToDatabase(self, data):
+	def logToDatabase(self, data, date):
 		isInt, isFloat = True, True
 		data = data.split(':')
 		if len(data) is not 3:
@@ -121,15 +119,15 @@ class DatabaseServiceProvider():
 			return
 		value = self.decodePIDValue(data[1], data[2])
 		if value is not None:
-			print "PID: %s, add %s to db for VIN:%s" % (data[1], value, data[0])
-			self.insert(data[0],data[1],value)
+			if self.debug:
+				print "PID: %s, add %s to db for VIN:%s" % (data[1], value, data[0])
+			self.insert(data[0],data[1],value, date)
 		else:
 			print "Error decoding PID, fail!"
 
-	def insert(self, vin, pid, data):
+	def insert(self, vin, pid, data, date):
 		query = """
-				insert into `data`
-				  values(NULL,"%s","%s","%s",NOW(),NOW())
-				""" % (vin, pid, data)
+				insert into data (vin, param_id, value, created) values('%s','%s','%s','%s')
+				""" % (vin, pid, data, date)
 		self.executeSQL(query, insert=True)
 
