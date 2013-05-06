@@ -21,8 +21,7 @@ class ThreadedTCPRequestHandler(SocketServer.StreamRequestHandler):
 				response = "%s: %s" % (cur_thread.getName(), data)
 				print response
 			if data:
-				date = datetime.datetime.now()
-				db_handler.logToDatabase(data, date)
+				db_handler.logToDatabase(data)
 			self.request.send("OK")
 
 class ThreadedTCPServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer):

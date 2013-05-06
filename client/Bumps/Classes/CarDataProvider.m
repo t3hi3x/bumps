@@ -269,6 +269,7 @@
    if (!shouldLogOBD) {
       return;
    }
+    NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
    char c;
    char buf[512] = {0};
    char *p;
@@ -296,7 +297,7 @@
    // change pointer to point to begining of data
    p -= 2;
    
-   s = [[NSString stringWithFormat:@"%@:11:%s\r\n", logId, p]
+   s = [[NSString stringWithFormat:@"%@:11:%s:%f\r\n", logId, p, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    if (s != nil)
    {
@@ -329,7 +330,7 @@
    // change pointer to point to begining of data
    p -= 2;
    
-   s = [[NSString stringWithFormat:@"%@:0D:%s\r\n", logId, p]
+   s = [[NSString stringWithFormat:@"%@:0D:%s:%f\r\n", logId, p, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    if (s != nil)
    {
@@ -367,7 +368,7 @@
    p[3] = p[4];
    p[5] = '\0';
    
-   s = [[NSString stringWithFormat:@"%@:0C:%s\r\n", logId, p]
+   s = [[NSString stringWithFormat:@"%@:0C:%s:%f\r\n", logId, p, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    if (s != nil)
    {
@@ -401,7 +402,7 @@
    // change pointer to point to begining of data
    p -= 2;
    
-   s = [[NSString stringWithFormat:@"%@:04:%s\r\n", logId, p]
+   s = [[NSString stringWithFormat:@"%@:04:%s:%f\r\n", logId, p, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    if (s != nil)
    {
@@ -435,7 +436,7 @@
    // change pointer to point to begining of data
    p -= 2;
    
-   s = [[NSString stringWithFormat:@"%@:05:%s\r\n", logId, p]
+   s = [[NSString stringWithFormat:@"%@:05:%s:%f\r\n", logId, p, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    if (s != nil)
    {
@@ -469,7 +470,7 @@
    // change pointer to point to begining of data
    p -= 2;
    
-   s = [[NSString stringWithFormat:@"%@:0A:%s\r\n", logId, p]
+   s = [[NSString stringWithFormat:@"%@:0A:%s:%f\r\n", logId, p, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    if (s != nil)
    {
@@ -504,13 +505,13 @@
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-	gpsDisplayStr = [[NSString alloc] initWithFormat:@"Location: %@", [newLocation description]];
-   
-   [self updateDisplay];
+    gpsDisplayStr = [[NSString alloc] initWithFormat:@"Location: %@", [newLocation description]];
+    NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
+    [self updateDisplay];
 	signal(SIGPIPE, SIG_IGN);
 	const char *p;
     @try {
-        p = [[NSString stringWithFormat:@"%@:LA:%.10f\r\n", logId, [newLocation coordinate].latitude]
+        p = [[NSString stringWithFormat:@"%@:LA:%.10f:%f\r\n", logId, [newLocation coordinate].latitude, now]
              cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
         send(serverSock, p, strlen(p), 0);
     }
@@ -518,7 +519,7 @@
         NSLog(@"Exception caught: %@", exception);
     }
     @try {
-        p = [[NSString stringWithFormat:@"%@:LO:%0.10f\r\n", logId, [newLocation coordinate].longitude]
+        p = [[NSString stringWithFormat:@"%@:LO:%0.10f:%f\r\n", logId, [newLocation coordinate].longitude, now]
              cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
         send(serverSock, p, strlen(p), 0);
     }
@@ -526,7 +527,7 @@
         NSLog(@"Exception caught: %@", exception);
     }
     @try {
-        p = [[NSString stringWithFormat:@"%@:CO:%.2f\r\n", logId, [newLocation course]]
+        p = [[NSString stringWithFormat:@"%@:CO:%.2f:%f\r\n", logId, [newLocation course], now]
              cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
         send(serverSock, p, strlen(p), 0);
     }
@@ -534,7 +535,7 @@
         NSLog(@"Exception caught: %@", exception);
     }
     @try {
-        p = [[NSString stringWithFormat:@"%@:HA:%.2f\r\n", logId, [newLocation horizontalAccuracy]]
+        p = [[NSString stringWithFormat:@"%@:HA:%.2f:%f\r\n", logId, [newLocation horizontalAccuracy], now]
              cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
         send(serverSock, p, strlen(p), 0);
     }
@@ -542,7 +543,7 @@
         NSLog(@"Exception caught: %@", exception);
     }
     @try {
-        p = [[NSString stringWithFormat:@"%@:VA:%.2f\r\n", logId, [newLocation verticalAccuracy]]
+        p = [[NSString stringWithFormat:@"%@:VA:%.2f:%f\r\n", logId, [newLocation verticalAccuracy], now]
              cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
         send(serverSock, p, strlen(p), 0);
     }
@@ -550,7 +551,7 @@
         NSLog(@"Exception caught: %@", exception);
     }
     @try {
-        p = [[NSString stringWithFormat:@"%@:SP:%.2f\r\n", logId, [newLocation speed]]
+        p = [[NSString stringWithFormat:@"%@:SP:%.2f:%f\r\n", logId, [newLocation speed], now]
              cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
         send(serverSock, p, strlen(p), 0);
     }
@@ -571,16 +572,18 @@
 {
 	accelDisplayStr = [[NSString alloc] initWithFormat:@"Acceleration: x: %.2f y: %.2f z: %.2f ",
                       acceleration.x, acceleration.y, acceleration.z];
-   [self updateDisplay];
+    NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
+
+    [self updateDisplay];
 	
 	const char *p;
-	p = [[NSString stringWithFormat:@"%@:AX:%.2f\r\n", logId, acceleration.x]
+	p = [[NSString stringWithFormat:@"%@:AX:%.2f:%f\r\n", logId, acceleration.x, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
 	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:AY:%.2f\r\n", logId, acceleration.y]
+	p = [[NSString stringWithFormat:@"%@:AY:%.2f:%f\r\n", logId, acceleration.y, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
 	send(serverSock, p, strlen(p), 0);
-	p = [[NSString stringWithFormat:@"%@:AZ:%.2f\r\n", logId, acceleration.z]
+	p = [[NSString stringWithFormat:@"%@:AZ:%.2f:%f\r\n", logId, acceleration.z, now]
         cStringUsingEncoding:(NSStringEncoding)NSASCIIStringEncoding];
    send(serverSock, p, strlen(p), 0);
 }

@@ -1,4 +1,6 @@
 import string
+import datetime
+
 from java.lang import *
 from java.sql import *
 
@@ -100,10 +102,10 @@ class DatabaseServiceProvider():
 			return None
 		return value
 
-	def logToDatabase(self, data, date):
+	def logToDatabase(self, data):
 		isInt, isFloat = True, True
 		data = data.split(':')
-		if len(data) is not 3:
+		if len(data) is not 4:
 			print "Bad data: %s" % data
 			return
 		try:
@@ -118,6 +120,7 @@ class DatabaseServiceProvider():
 			print "Bad data: %s" % data
 			return
 		value = self.decodePIDValue(data[1], data[2])
+		date = datetime.datetime.fromtimestamp(float(data[3]))
 		if value is not None:
 			if self.debug:
 				print "PID: %s, add %s to db for VIN:%s" % (data[1], value, data[0])
